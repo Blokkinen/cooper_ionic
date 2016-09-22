@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatables
          :omniauthable
   include DeviseTokenAuth::Concerns::User
+has_many :performance_data, class_name: 'PerformanceData'
 end
